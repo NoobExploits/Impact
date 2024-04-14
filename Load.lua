@@ -1,0 +1,12 @@
+-- Got from https://github.com/RegularVynixu/Vynixius/blob/main/Loader.lua btw :)
+local games = {
+    [{155615604}] = "https://raw.githubusercontent.com/NoobExploits/scripts/main/ImpactHub/Prison%20Life.lua",
+    [{662417684}] = "https://raw.githubusercontent.com/NoobExploits/scripts/main/ImpactHub/Lucky%20Blocks.lua",
+}
+
+for ids, url in next, games do
+    if table.find(ids, game.PlaceId) then
+        loadstring(game:HttpGet(url))()
+        break
+    end
+end
