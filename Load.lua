@@ -1,7 +1,7 @@
 -- Got from https://github.com/RegularVynixu/Vynixius/blob/main/Loader.lua btw :)
 local games = {
-    [{155615604}] = "https://raw.githubusercontent.com/NoobExploits/scripts/main/ImpactHub/Prison%20Life.lua",
-    [{662417684}] = "https://raw.githubusercontent.com/NoobExploits/scripts/main/ImpactHub/Lucky%20Blocks.lua",
+    [{155615604}] = "https://raw.githubusercontent.com/NoobExploits/Impact/main/games/Prison%20Life.lua",
+    [{662417684}] = "https://raw.githubusercontent.com/NoobExploits/Impact/main/games/Lucky%20Block%20BG.lua",
 }
 
 for ids, url in next, games do
