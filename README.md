@@ -1,6 +1,6 @@
 # Impact Hub 🚀
 ```lua
-loadstring(game:HttpGet("https://raw.githubusercontent.com/NoobExploits/scripts/main/MainScript.lua"))();
+loadstring(game:HttpGet("https://raw.githubusercontent.com/NoobExploits/Impact/main/Load.lua"))();
 ```
 
 # Suported Games
