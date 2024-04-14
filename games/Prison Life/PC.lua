@@ -3,15 +3,15 @@ local Inviter=loadstring(game:HttpGet("https://raw.githubusercontent.com/Regular
 local LocalPlayer = LocalPlayer
 
 getgenv().spamSoond = false
-getgenv().stopsounds = false
+getgenv().stopsoun = false
 getgenv().ka = false
 
 -- i dont think this works
 function stopSound()
-	while getgenv().stopsounds == true do
+	while getgenv().stopsoun == true do
 		local class_check = game.IsA
 		local sound = Instance.new('Sound')
-		local sound_stop = sound:Remove()
+		local sound_stop = sound:Destroy()
 		local get_descendants = game.GetDescendants
 
 		for i,v in next, get_descendants(game) do 
@@ -373,7 +373,7 @@ ExploitsTab:AddToggle({
 ExploitsTab:AddToggle({
 	Name = "Stop Sounds", Default = false, Save = true, Flag = "stopsounds_pl",
 	Callback = function(bool)
-		getgenv().stopSound = bool
+		getgenv().stopsoun = bool
         if bool then
             stopSound()
         end
