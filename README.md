@@ -2,7 +2,7 @@
 ```lua
 local flu = loadstring(game:HttpGet("https://github.com/dawid-scripts/Fluent/releases/latest/download/main.lua"))()
 
-if (identifyexecutor()) == "Delta Android" then
+if (identifyexecutor()) == "Delta" then
       flu:Notify({
         Title = "Delta Detected  ☢️",
         Content = "This script has some features that Delta doesnt have please switch to something else! (Example: Codex)",
