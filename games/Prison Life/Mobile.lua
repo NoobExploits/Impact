@@ -1,8 +1,4 @@
 local GetName = game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId)
-local Inviter =
-    loadstring(
-    game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Utilities/main/Discord%20Inviter/Source.lua")
-)()
 local LocalPlayer = game.Players.LocalPlayer
 
 getgenv().spamSoond = false
@@ -842,8 +838,7 @@ InfoTab:AddButton(
     {
         Name = "Join Discord",
         Callback = function()
-            Inviter.Prompt({name = "Impact", invite = "discord.gg/PDxxpQ3nqm"})
-            Inviter.Join("discord.gg/PDxxpQ3nqm")
+            setclipboard("discord.gg/PDxxpQ3nqm")
         end
     }
 )
