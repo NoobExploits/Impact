@@ -98,7 +98,8 @@ local TeamTab = Window:MakeTab({Name = "Teams", Icon = "rbxassetid://15862677356
 local ExploitsTab = Window:MakeTab({Name = "Exploits", Icon = "rbxassetid://15841340999", PremiumOnly = false})
 local InfoTab = Window:MakeTab({Name = "Info", Icon = "rbxassetid://15841490359", PremiumOnly = false})
 
-GunTab:AddLabel("Inf ammo doesnt have a check reload so you need to reload the gun (someone pls tell me how to fix)")
+GunTab:AddLabel("Inf ammo doesnt have a check reload so you need to")
+GunTab:AddLabel("reload the gun (someone pls tell me how to fix)")
 
 GameTab:AddButton(
     {
