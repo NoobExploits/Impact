@@ -1,5 +1,15 @@
 local flu = loadstring(game:HttpGet("https://github.com/dawid-scripts/Fluent/releases/latest/download/main.lua"))()
 
+if (identifyexecutor()) == "Delta Android" then
+      flu:Notify({
+        Title = "Delta Detected  ☢️",
+        Content = "This script has some features that Delta doesnt have please switch to something else! (Example: Codex)",
+        Duration = 999999
+    })
+    wait(15)
+    game.Players.LocalPlayer:Kick("This script has some features that Delta doesnt have please switch to something else! (Example: Codex)")
+end
+
 flu:Notify(
     {
         Title = "Please Wait.  📢",
