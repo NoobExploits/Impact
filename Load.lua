@@ -7,6 +7,16 @@ flu:Notify({
     Duration = 5
 })
 
+if (identifyexecutor()) == "Delta Android" then
+      flu:Notify({
+        Title = "Delta Detected  ☢️",
+        Content = "This script has some features that Delta doesnt have please switch to something else! (Example: Codex)",
+        Duration = 999999
+    })
+    wait(15)
+    game.Players.LocalPlayer:Kick("This script has some features that Delta doesnt have please switch to something else! (Example: Codex)")
+end
+
 local succ, err = xpcall(function()
     loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/NoobExploits/Impact/main/src/Checker.lua", true))()
 
@@ -18,7 +28,11 @@ end, function(err)
             Content = "The script is currently down or something broke, please try again later or message @noobexploits.",
             Duration = 5
         })
-
+        flu:Notify({
+            Title = "Impact failed to load!  💫",
+            Content = "D",
+            Duration = 5
+        })
         
         Inviter.Prompt({name = "Impact", invite = "discord.gg/PDxxpQ3nqm"})
     end
