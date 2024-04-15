@@ -1,4 +1,5 @@
-local GetName = game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId)local LocalPlayer = game.Players.LocalPlayer
+local GetName = game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId)
+local LocalPlayer = game.Players.LocalPlayer
 
 getgenv().spamSoond = false
 getgenv().stopsoun = false
@@ -9,7 +10,7 @@ function stopSound()
     while getgenv().stopsoun == true do
         local class_check = game.IsA
         local sound = Instance.new("Sound")
-        local sound_stop = sound:Remove()
+        local sound_stop = sound:Destroy()
         local get_descendants = game.GetDescendants
 
         for i, v in next, get_descendants(game) do
