@@ -1,6 +1,6 @@
 local GetName = game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId)
 local Inviter=loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Utilities/main/Discord%20Inviter/Source.lua"))()
-local LocalPlayer = LocalPlayer
+local LocalPlayer = game.Players.LocalPlayer
 
 getgenv().spamSoond = false
 getgenv().stopsounds = false
