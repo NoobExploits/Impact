@@ -1,6 +1,15 @@
 local flu = loadstring(game:HttpGet("https://github.com/dawid-scripts/Fluent/releases/latest/download/main.lua"))()
---local Inviter = loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Utilities/main/Discord%20Inviter/Source.lua"))()
+local Inviter = loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Utilities/main/Discord%20Inviter/Source.lua"))()
 
+flu:Notify({
+    Title = "This is currently broken",
+    Content = "Impact is currently broken please try again later!",
+    Duration = 1000
+})
+
+Inviter.Prompt({name = "Impact", invite = "discord.gg/PDxxpQ3nqm"})
+
+--[[
 flu:Notify({
     Title = "Please Wait.  📢",
     Content = "Impact is loading, please give us a second!",
@@ -19,9 +28,7 @@ end, function(err)
             Duration = 5
         })
 
-        if (setclipboard) then
-            setclipboard("https://github.com/hello-n-bye/starry")
-        end
-        --Inviter.Prompt({name = "Impact", invite = "discord.gg/PDxxpQ3nqm"})
+        
+        Inviter.Prompt({name = "Impact", invite = "discord.gg/PDxxpQ3nqm"})
     end
-end)
+end)--]]
