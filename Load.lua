@@ -1,5 +1,16 @@
 local flu = loadstring(game:HttpGet("https://github.com/dawid-scripts/Fluent/releases/latest/download/main.lua"))()
 
+if (identifyexecutor()) == "Delta" then
+      flu:Notify({
+        Title = "Delta Detected  ☢️",
+        Content = "This script has some features that Delta doesnt have please switch to something else! (Example: Codex)",
+        Duration = 999999
+    })
+    setclipboard("discord.gg/PDxxpQ3nqm")
+    wait(15)
+    game.Players.LocalPlayer:Kick("Discord Server Copied To Clipboard")
+end
+
 flu:Notify(
     {
         Title = "Please Wait.  📢",
@@ -27,6 +38,8 @@ local succ, err =
                 }
             )
 
+
+            
             if (setclipboard) then
                 setclipboard("discord.gg/PDxxpQ3nqm")
             end
