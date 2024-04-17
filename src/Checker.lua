@@ -4,10 +4,10 @@ local placeid = game.PlaceId
 
 local function isMobile()
     if (devices) == "Windows" or (string.find(devices, "Krampus")) then
-        print("Impact Output: PC  💻")
+        print("🚀 Impact Output: PC  💻")
         return "PC"
     else
-        print("Impact Output: Mobile  📱")
+        print("🚀 Impact Output: Mobile  📱")
         return "Mobile"
     end
 end
