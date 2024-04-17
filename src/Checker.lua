@@ -4,16 +4,23 @@ local placeid = game.PlaceId
 
 local function isMobile()
     if (devices) == "Windows" or (string.find(devices, "Krampus")) then
+        print("Impact Output: PC  💻")
         return "PC"
     else
+        print("Impact Output: Mobile  📱")
         return "Mobile"
     end
 end
 
-if (placeid) == 155615604 or (placeid) == 662417684 then
-    if (placeid) == 155615604 then
-        loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/NoobExploits/Impact/main/games/Prison%20Life/" .. isMobile() ..".lua", true))()
-    else
-        loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/NoobExploits/Impact/main/games/Lucky%20Block%20BG/PC.lua", true))()
+local games = {
+    [155615604] = "https://raw.githubusercontent.com/NoobExploits/Impact/main/games/Prison%20Life/" .. isMobile() ..".lua",
+    [662417684] = "https://raw.githubusercontent.com/NoobExploits/Impact/main/games/Lucky%20Block%20BG/PC.lua",
+}
+
+for ids, url in next, games do
+    if ids == game.PlaceId then
+        loadstring(game:HttpGet(url))()
+        break
     end
 end
+
