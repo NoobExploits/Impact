@@ -1,18 +1,20 @@
 # Impact Hub 🚀
 ```lua
-local flu = loadstring(game:HttpGet("https://github.com/dawid-scripts/Fluent/releases/latest/download/main.lua"))()
+local branch, owner = "main", "NoobExploits"
 
-if (identifyexecutor()) == "Delta" then
-      flu:Notify({
-        Title = "Delta Detected  ☢️",
-        Content = "This script has some features that Delta doesnt have please switch to something else! (Example: Codex)",
-        Duration = 999999
-    })
-    wait(15)
-    game.Players.LocalPlayer:Kick("This script has some features that Delta doesnt have please switch to something else! (Example: Codex)")
+local function load(url: string)
+  if (type(url)) ~= "string" then
+    return warn("Url must be a string to load it.")
+  else
+    xpcall(function()
+      loadstring(game:HttpGet(url))()
+    end, function(error_code)
+      return warn(("Error: %s on line %s"):format(error_code, debug.traceback()))
+    end)
+  end
 end
 
-loadstring(game:HttpGet("https://raw.githubusercontent.com/NoobExploits/Impact/main/Load.lua"))();
+load(("[https://raw.githubusercontent.com/%s/starry/%s/main.lua](https://raw.githubusercontent.com/%s/Impact/%s/Load.lua)"):format(owner, branch))
 ```
 
 # Suported Games
