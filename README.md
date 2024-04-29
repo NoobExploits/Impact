@@ -14,7 +14,7 @@ local function load(url: string)
   end
 end
 
-load(("[https://raw.githubusercontent.com/%s/starry/%s/main.lua](https://raw.githubusercontent.com/%s/Impact/%s/Load.lua)"):format(owner, branch))
+load(("https://raw.githubusercontent.com/%s/Impact/%s/Load.lua"):format(owner, branch))
 ```
 
 # Suported Games
