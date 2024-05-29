@@ -1,15 +1,15 @@
-local devices = loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/NoobExploits/starry/master/src/device.lua", true))()
-
+local devices = loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/hello-n-bye/starry/main/src/device.lua", true))()
 local placeid = game.PlaceId
 
--- Checks if it got Windows or Mobile from the device checker
 local function isMobile()
     if (devices) == "Windows" or (string.find(devices, "Krampus")) then
-        print("🚀 Impact Output: PC  💻")
         return "PC"
     else
-        print("🚀 Impact Output: Mobile  📱")
-        return "Mobile"
+        if (string.find(identifyexecutor(), "Solara")) or (string.find(identifyexecutor(), "Wave")) then
+            return "PC"
+        else
+            return "Mobile"
+        end
     end
 end
 
