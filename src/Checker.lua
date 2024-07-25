@@ -3,12 +3,16 @@ local placeid = game.PlaceId
 
 local function isMobile()
     if (devices) == "Windows" or (string.find(devices, "Krampus")) then
-        return "PC"
+        return "pc"
     else
-        if (string.find(identifyexecutor(), "Solara")) or (string.find(identifyexecutor(), "Wave")) then
-            return "PC"
+        if (string.find(identifyexecutor(), "Solara")) or (string.find(identifyexecutor(), "Wave")) or (string.find(identifyexecutor(), "incognito")) then
+            return "pc"
         else
-            return "Mobile"
+            if (string.find(string.lower(identifyexecutor()), "macsploit")) then
+                return "pc"
+            else
+                return "mobile"
+            end
         end
     end
 end
