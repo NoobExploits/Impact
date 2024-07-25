@@ -1,3 +1,4 @@
+-- omg update the fucking raw.githubusercontent.com right now im gonna yolk myself holy fuck
 local devices = loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/NoobExploits/starry/master/src/device.lua", true))()
 local placeid = game.PlaceId
 
